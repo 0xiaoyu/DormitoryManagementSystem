@@ -1,7 +1,7 @@
 package com.yu.mapper;
 
-import com.yu.domain.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.yu.domain.Student;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -11,7 +11,8 @@ import org.apache.ibatis.annotations.Mapper;
 * @Entity com.yu.domain.Students
 */
 @Mapper
-public interface StudentsMapper extends BaseMapper<Student> {
+public interface StudentMapper extends BaseMapper<Student> {
+
 
 }
 

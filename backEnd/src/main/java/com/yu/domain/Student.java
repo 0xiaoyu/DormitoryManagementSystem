@@ -7,15 +7,14 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 /**
  * 学生表
- * @TableName students
+ * @TableName student
  */
-@TableName(value ="students")
+@TableName(value ="student")
 @Data
-public class Students implements Serializable {
+public class Student implements Serializable {
     /**
      * 学生学号
      */
@@ -38,14 +37,29 @@ public class Students implements Serializable {
     private String name;
 
     /**
-     * 生日
-     */
-    private LocalDate birthday;
-
-    /**
      * 学生密码
      */
     private String password;
+
+    /**
+     * 电话
+     */
+    private String phone;
+
+    /**
+     * 住宿房间
+     */
+    private Integer roomid;
+
+    /**
+     * 栋数
+     */
+    private Integer dormitoryid;
+
+    /**
+     * 床号
+     */
+    private Integer bedid;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -61,13 +75,16 @@ public class Students implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        Students other = (Students) that;
+        Student other = (Student) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getGender() == null ? other.getGender() == null : this.getGender().equals(other.getGender()))
             && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getBirthday() == null ? other.getBirthday() == null : this.getBirthday().equals(other.getBirthday()))
-            && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()));
+            && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
+            && (this.getPhone() == null ? other.getPhone() == null : this.getPhone().equals(other.getPhone()))
+            && (this.getRoomid() == null ? other.getRoomid() == null : this.getRoomid().equals(other.getRoomid()))
+            && (this.getDormitoryid() == null ? other.getDormitoryid() == null : this.getDormitoryid().equals(other.getDormitoryid()))
+            && (this.getBedid() == null ? other.getBedid() == null : this.getBedid().equals(other.getBedid()));
     }
 
     @Override
@@ -78,8 +95,11 @@ public class Students implements Serializable {
         result = prime * result + ((getGender() == null) ? 0 : getGender().hashCode());
         result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
-        result = prime * result + ((getBirthday() == null) ? 0 : getBirthday().hashCode());
         result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
+        result = prime * result + ((getPhone() == null) ? 0 : getPhone().hashCode());
+        result = prime * result + ((getRoomid() == null) ? 0 : getRoomid().hashCode());
+        result = prime * result + ((getDormitoryid() == null) ? 0 : getDormitoryid().hashCode());
+        result = prime * result + ((getBedid() == null) ? 0 : getBedid().hashCode());
         return result;
     }
 
@@ -93,8 +113,11 @@ public class Students implements Serializable {
         sb.append(", gender=").append(gender);
         sb.append(", age=").append(age);
         sb.append(", name=").append(name);
-        sb.append(", birthday=").append(birthday);
         sb.append(", password=").append(password);
+        sb.append(", phone=").append(phone);
+        sb.append(", roomid=").append(roomid);
+        sb.append(", dormitoryid=").append(dormitoryid);
+        sb.append(", bedid=").append(bedid);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

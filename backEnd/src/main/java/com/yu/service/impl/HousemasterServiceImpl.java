@@ -1,9 +1,10 @@
 package com.yu.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yu.domain.Housemaster;
-import com.yu.service.HousemasterService;
 import com.yu.mapper.HousemasterMapper;
+import com.yu.service.HousemasterService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,13 @@ import org.springframework.stereotype.Service;
 public class HousemasterServiceImpl extends ServiceImpl<HousemasterMapper, Housemaster>
     implements HousemasterService{
 
+    @Override
+    public Housemaster login(String username, String password) {
+        LambdaQueryWrapper<Housemaster> lqw = new LambdaQueryWrapper<>();
+        lqw.eq(Housemaster::getName, username);
+        lqw.eq(Housemaster::getPassword, password);
+        return getOne(lqw);
+    }
 }
 
 

@@ -10,4 +10,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface HousemasterService extends IService<Housemaster> {
 
+    Housemaster login(String username, String password);
 }

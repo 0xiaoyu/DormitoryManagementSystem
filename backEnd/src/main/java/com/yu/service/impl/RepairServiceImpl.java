@@ -2,8 +2,8 @@ package com.yu.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yu.domain.Repair;
-import com.yu.service.RepairService;
 import com.yu.mapper.RepairMapper;
+import com.yu.service.RepairService;
 import org.springframework.stereotype.Service;
 
 /**

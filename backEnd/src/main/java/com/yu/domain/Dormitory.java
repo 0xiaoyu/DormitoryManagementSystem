@@ -17,13 +17,23 @@ public class Dormitory implements Serializable {
     /**
      * 楼层id
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
      * 共多少层
      */
     private Integer floor;
+
+    /**
+     * 宿舍类型 1 男 2 女
+     */
+    private Integer type;
+
+    /**
+     * 宿舍名字(10字)
+     */
+    private String name;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -41,7 +51,9 @@ public class Dormitory implements Serializable {
         }
         Dormitory other = (Dormitory) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getFloor() == null ? other.getFloor() == null : this.getFloor().equals(other.getFloor()));
+            && (this.getFloor() == null ? other.getFloor() == null : this.getFloor().equals(other.getFloor()))
+            && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
+            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()));
     }
 
     @Override
@@ -50,6 +62,8 @@ public class Dormitory implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getFloor() == null) ? 0 : getFloor().hashCode());
+        result = prime * result + ((getType() == null) ? 0 : getType().hashCode());
+        result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         return result;
     }
 
@@ -61,6 +75,8 @@ public class Dormitory implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", floor=").append(floor);
+        sb.append(", type=").append(type);
+        sb.append(", name=").append(name);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

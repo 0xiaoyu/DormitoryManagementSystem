@@ -35,6 +35,31 @@ public class Housemaster implements Serializable {
      */
     private Integer dormitoryid;
 
+    /**
+     * 管理密码
+     */
+    private String password;
+
+    /**
+     * 年龄
+     */
+    private Integer age;
+
+    /**
+     * 角色
+     */
+    private String roles;
+
+    /**
+     * 头像地址
+     */
+    private String avatar;
+
+    /**
+     * 手机号
+     */
+    private String phone;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 
@@ -53,7 +78,12 @@ public class Housemaster implements Serializable {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getGender() == null ? other.getGender() == null : this.getGender().equals(other.getGender()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getDormitoryid() == null ? other.getDormitoryid() == null : this.getDormitoryid().equals(other.getDormitoryid()));
+            && (this.getDormitoryid() == null ? other.getDormitoryid() == null : this.getDormitoryid().equals(other.getDormitoryid()))
+            && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
+            && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()))
+            && (this.getRoles() == null ? other.getRoles() == null : this.getRoles().equals(other.getRoles()))
+            && (this.getAvatar() == null ? other.getAvatar() == null : this.getAvatar().equals(other.getAvatar()))
+            && (this.getPhone() == null ? other.getPhone() == null : this.getPhone().equals(other.getPhone()));
     }
 
     @Override
@@ -64,6 +94,11 @@ public class Housemaster implements Serializable {
         result = prime * result + ((getGender() == null) ? 0 : getGender().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getDormitoryid() == null) ? 0 : getDormitoryid().hashCode());
+        result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
+        result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
+        result = prime * result + ((getRoles() == null) ? 0 : getRoles().hashCode());
+        result = prime * result + ((getAvatar() == null) ? 0 : getAvatar().hashCode());
+        result = prime * result + ((getPhone() == null) ? 0 : getPhone().hashCode());
         return result;
     }
 
@@ -77,6 +112,11 @@ public class Housemaster implements Serializable {
         sb.append(", gender=").append(gender);
         sb.append(", name=").append(name);
         sb.append(", dormitoryid=").append(dormitoryid);
+        sb.append(", password=").append(password);
+        sb.append(", age=").append(age);
+        sb.append(", roles=").append(roles);
+        sb.append(", avatar=").append(avatar);
+        sb.append(", phone=").append(phone);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

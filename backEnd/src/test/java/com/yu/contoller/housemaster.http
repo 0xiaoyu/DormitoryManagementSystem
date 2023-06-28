@@ -1,0 +1,76 @@
+# curl 'http://localhost/api/housemaster/logout'
+#  -X 'POST'
+#  -H 'Accept: application/json, text/plain, */*'
+#  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+#  -H 'Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNjg4NTE5MDMyfQ._CuQtjEWLo7IPx6n-okCGnzfaMBg5ebUxxHHLVZpDlM'
+#  -H 'Connection: keep-alive'
+#  -H 'Content-Length: 0'
+#  -H 'Cookie: Idea-cff8d374=96856256-7652-4d64-8198-dee3d143470c; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNjg4NTE5MDMyfQ._CuQtjEWLo7IPx6n-okCGnzfaMBg5ebUxxHHLVZpDlM'
+#  -H 'Origin: http://localhost'
+#  -H 'Referer: http://localhost/'
+#  -H 'Sec-Fetch-Dest: empty'
+#  -H 'Sec-Fetch-Mode: cors'
+#  -H 'Sec-Fetch-Site: same-origin'
+#  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58'
+#  -H 'sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Microsoft Edge";v="114"'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  --compressed
+POST http://localhost/api/housemaster/logout
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNjg4NTE5MDMyfQ._CuQtjEWLo7IPx6n-okCGnzfaMBg5ebUxxHHLVZpDlM
+Connection: keep-alive
+Content-Length: 0
+Cookie: Idea-cff8d374=96856256-7652-4d64-8198-dee3d143470c; Admin-Token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNjg4NTE5MDMyfQ._CuQtjEWLo7IPx6n-okCGnzfaMBg5ebUxxHHLVZpDlM
+Origin: http://localhost
+Referer: http://localhost/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Microsoft Edge";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+
+###
+
+# curl 'http://localhost/api/housemaster/login'
+#  -H 'Accept: application/json, text/plain, */*'
+#  -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6'
+#  -H 'Connection: keep-alive'
+#  -H 'Content-Type: application/json;charset=UTF-8'
+#  -H 'Cookie: Idea-cff8d374=96856256-7652-4d64-8198-dee3d143470c'
+#  -H 'Origin: http://localhost'
+#  -H 'Referer: http://localhost/'
+#  -H 'Sec-Fetch-Dest: empty'
+#  -H 'Sec-Fetch-Mode: cors'
+#  -H 'Sec-Fetch-Site: same-origin'
+#  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58'
+#  -H 'sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Microsoft Edge";v="114"'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'sec-ch-ua-platform: "Windows"'
+#  --data-raw '{"username":"admin","password":"qqroot"}'
+#  --compressed
+POST http://localhost/api/housemaster/login
+Accept: application/json, text/plain, */*
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Connection: keep-alive
+Cookie: Idea-cff8d374=96856256-7652-4d64-8198-dee3d143470c
+Origin: http://localhost
+Referer: http://localhost/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.58
+sec-ch-ua: "Not.A/Brand";v="8", "Chromium";v="114", "Microsoft Edge";v="114"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Content-Type: application/json;charset=UTF-8
+
+{"username":"admin","password":"qqroot"}
+
+###
+GET http://localhost:8080/housemaster/list?page=1&limit=10
+
+

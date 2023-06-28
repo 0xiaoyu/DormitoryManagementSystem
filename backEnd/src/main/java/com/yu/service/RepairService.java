@@ -1,7 +1,7 @@
 package com.yu.service;
 
-import com.yu.domain.Repair;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yu.domain.Repair;
 
 /**
 * @author za'y

@@ -1,0 +1,30 @@
+<view class="v1">
+
+  <!-- v2父容器  子view使用绝对布局 -->
+  <view class="v2">
+    <view class="dltext">登录</view>
+
+    <!-- 手机号 -->
+    <view class="phoneCs">
+      <image src="/images/phone.png" class="ph"></image>
+      <input placeholder="请输入手机号" />
+    </view>
+
+    <!-- 密码 -->
+    <view class=passwordCs">
+      <image src="/images/password.png" class="ps"></image>
+      <input placeholder="请输入密码" />
+      <image src="/images/eye-open.png" class="eye"></image>
+    </view>
+
+    <!-- 注册 和忘记密码  -->
+    <view class="zhuce">
+      <navigator>忘记密码?</navigator>
+    </view>
+    <!-- 登录按钮 -->
+    <view class="denglu">
+      <button class="btn-dl" type="primary">登录</button>
+    </view>
+  </view>
+
+</view>
